@@ -1,0 +1,109 @@
+
+/* 이미지 크기 맞추고 grid 조정 하고 사진이랑 로그인창 비율 맞추기*/
+
+body{
+  padding : 0;
+  margin : 0;
+  background: #2c3e50;
+  font-family : Georgia;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 15px;
+  margin-bottom: 0;
+
+}
+h2{
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+p#subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom : 60px;
+}
+/* 여기까진 오케이*/
+.all {
+          display : grid;
+          grid-template-columns: 1.5fr 1fr;
+          height : 450px;
+
+     }
+
+
+.picture{
+  background: url(muscle.png) no-repeat ;
+  margin-left: 40px;
+  background-size : cover; /* background size : cover 을 통해 div부분을 꽉채움*/
+
+
+}
+div#inputs
+{
+  border : 2px solid black;
+  border-left : none;
+  margin-right: 40px;
+
+}
+
+
+
+/* 여기부터 밑에도 오케이*/
+#inputs input[type="text"], #inputs input[type="password"]
+{
+  width : 200px;
+  height : 50px;
+  margin : 10px auto;
+  border : #3498db solid 2px;
+  border-radius : 25px;
+  background : none;
+  outline : none;
+  text-align: center;
+  color : white;
+  transition : 0.25s;
+  display: flex;
+  justify-content: center;
+
+}
+#inputs input[type="text"]:focus::placeholder, #inputs input[type="password"]:focus::placeholder
+{
+  color : transparent;
+}
+#inputs input[type="submit"]
+{
+  width : 100px;
+  height : 30px;
+  margin : 20px auto;
+  border : #3498db solid 2px;
+  border-radius : 25px;
+  background : none;
+  outline : none;
+  text-align: center;
+  color : white;
+  text-transform : uppercase;
+  transition : 0.25s;
+  display: flex;
+  justify-content: center;   /* flex box에서 justify는 row에서의 움직임이고 align-items 는 column에서의 움직임임*/
+
+}
+#inputs input[type="text"]:hover, #inputs input[type="password"]:hover
+{
+   width : 300px;
+   border : #2ecc71 2px solid;
+}
+
+#inputs input[type="submit"]:hover
+{
+  background :#2ecc71;
+  cursor : pointer;
+  border : #2ecc71 2px solid;
+}
+@media (max-width : 970px){
+  .all {display : block; }
+  div#inputs{border:0; margin-right:0;}
+
+
+}
